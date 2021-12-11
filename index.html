@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM Meme Generator</title>
+    <link rel="icon" href="./assets/images/icons/logo_sam.jpg">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/scripts/index.js"></script>
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body class="flex column align">
+<header class="flex align">
+    <div class="logo flex align">
+        <img src="./assets/images/icons/logo_sam.jpg" alt="logo">
+        <h1>Meme Generator</h1>
+    </div>
+    <nav>
+        <a href="criadores.html" target="_self">Criadores</a>
+    </nav>
+</header>
+<main class="flex align justify">
+    <section class="container flex">
+        <div class="preview flex column">
+            <h1 class="title">Meme Preview</h1>
+            <div class="content flex align justify">
+                <img id="meme_preview" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Ftotal-black&psig=AOvVaw2vtp7tg5dLgysUg45gX56o&ust=1639195968168000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODGrP2u2PQCFQAAAAAdAAAAABAI" alt="meme">
+            </div>
+            <div class="content flex align justify">
+                <a id="download" class="button" href="">Download</a>
+            </div>
+        </div>
+        <div class="configs flex column align">
+            <div class="menu">
+                <ul class="flex align">
+                    <li class="menu_option selected">Base</li>
+                    <li class="menu_option">Texto</li>
+                    <li class="menu_option">Selo</li>
+                    <li class="menu_option">Opções</li>
+                </ul>
+            </div>
+            <div class="main_painel content flex align justify">
+                <section class="base flex">
+                    <img class="base_option selected" rel="10_10" src="./assets/images/bases/10_10.png" alt="base">
+                    <img class="base_option" rel="bolsonaro" src="./assets/images/bases/bolsonaro.png" alt="base">
+                    <img class="base_option" rel="diabo" src="./assets/images/bases/diabo.png" alt="base">
+                    <img class="base_option" rel="galo_cego" src="./assets/images/bases/galo_cego.png" alt="base">
+                    <img class="base_option" rel="irineu" src="./assets/images/bases/irineu.png" alt="base">
+                    <img class="base_option" rel="nazare_confusa" src="./assets/images/bases/nazare_confusa.png" alt="base">
+                    <img class="base_option" rel="pensando" src="./assets/images/bases/pensando.png"base">
+                    <img class="base_option" rel="ronaldinho" src="./assets/images/bases/ronaldinho.png" alt="base">
+                    <img class="base_option" rel="vin_diesel" src="./assets/images/bases/vin_diesel.png" alt="base">
+                </section>
+                <section class="texto flex column hide">
+                    <textarea name="texto" id="texto" maxlength="100" placeholder="Eis que...  Texto do meme" style="resize: none;" spellcheck="False"></textarea>
+                    <button id="save" class="button">Salvar</button>
+                </section>
+                <section class="selo flex hide">
+                    <div class="selo_img">
+                        <img class="selo_img_option selected" rel="logo_sam_1" src="./assets/images/selos/logo_sam_1.png" alt="base">
+                        <img class="selo_img_option" rel="logo_sam_2" src="./assets/images/selos/logo_sam_2.png" alt="base">
+                        <img class="selo_img_option" rel="logo_sam_3" src="./assets/images/selos/logo_sam_3.png" alt="base">    
+                    </div>
+                    <div class="selo_pos">
+                        <img class="selo_pos_option" rel="top_left" src="./assets/images/selos/top_left.png" alt="base">
+                        <img class="selo_pos_option" rel="top_right" src="./assets/images/selos/top_right.png" alt="base">
+                        <img class="selo_pos_option selected" rel="bottom_left" src="./assets/images/selos/bottom_left.png" alt="base">    
+                        <img class="selo_pos_option" rel="bottom_right" src="./assets/images/selos/bottom_right.png" alt="base">   
+                        <img class="selo_pos_option" rel="center" src="./assets/images/selos/center.png" alt="base">  
+                        <img class="selo_pos_option" rel="random" src="./assets/images/selos/random.png" alt="base">  
+                    </div>
+                </section>
+                <section class="opcoes flex column hide">
+                    <h2>Qualidade do Meme</h2>
+                    <input class="input" type="number" name="qualidade" id="qualidade" max="100" value="100" min="0" placeholder="qualidade">
+                    <h2>Opacidade do Selo</h2>
+                    <input class="input" type="number" name="opacidade" id="opacidade" value="100" max="100" min="0" placeholder="opacidade">
+                    <button class="button salvar_opcao">Salvar</button>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+
+</html>
