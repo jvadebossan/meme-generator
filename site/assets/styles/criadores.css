@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary: #2a292c;/*ba88f4*/
+    --primary-opacity: #202020;
+    --background: #202020;
+    --secondary-background: #1d6bb4;
+    --text: #f3f3f3;
+    --text-black: #141414;
+    --subtext: #A8A8A9;
+}
+
+
+body{
+    background-color: var(--background);
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 92%;
+    margin-top: 2px;
+    justify-content: space-around;
+}
+
+
+.creator-card{
+    width: 60%;
+    height: 20%;
+    background-color: var(--primary);
+    border-radius: 7px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position:relative;
+}
+
+.creator-card .creator-card-github{
+    position: absolute;
+    display: flex;
+    width:90px;
+}
+
+.creator-card .creator-card-image{
+    width:90px;
+    border-radius: 45px;
+    position:absolute;
+}
+
+.creator-card .creator-card-github img{
+    width:100%;
+}
+
+.creator-card-left .creator-card-image{
+    left:30px;
+}
+
+.creator-card-right .creator-card-image{
+    right:30px;
+}
+
+.creator-card-left .creator-card-github{
+    right:30px;
+}
+
+.creator-card-right .creator-card-github{
+    left:30px;
+}
+
+.creator-card-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name, .job{
+    font-size: 1.7rem;
+}
+
+.name{
+    color: white;
+}
+
+.job{
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--secondary-background);
+}
+
+@media only screen and (max-width:750px){
+
+    main{
+        height: max-content;
+    }
+
+    .creator-card{
+        width: 90%;
+        flex-direction: column;
+        height: max-content;
+        margin-top:10px;
+    }
+
+    .creator-card-right{
+        flex-direction: column-reverse;
+    }
+
+    .creator-card .creator-card-github{
+        position: unset;
+    }
+
+    .creator-card .creator-card-image{
+        display: none;
+    }
+
+}
